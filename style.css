@@ -53,6 +53,35 @@ p {
     border-radius: 5px;
 }
 
+#navbar {
+    background-color: #333; /* ナビゲーションバーの背景色 */
+    color: white;
+    width: 100%;
+    position: fixed; /* 常に画面の上部に固定 */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0; /* パディングを加えてレイアウトを調整 */
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#navbar li {
+    display: inline; /* リスト項目を横並びに表示 */
+    margin-right: 20px;
+}
+
+#navbar a {
+    color: rgb(57, 3, 72);
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* レスポンシブデザイン：画面サイズに応じたスタイル調整 */
 @media (max-width: 768px) {
     body {
