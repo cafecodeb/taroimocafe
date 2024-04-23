@@ -16,3 +16,7 @@
 ## ライブラリ
 https://min30327.github.io/luxy.js/
 
+## パララックスの候補
+https://simpleparallax.com/#examples
+https://simpleparallax.com/
+

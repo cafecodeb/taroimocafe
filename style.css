@@ -1,120 +1,134 @@
-/* 基本のスタイル設定 */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0A192F; /* ダークネイビー */
-    color: #ECEFF4; /* クリーミーホワイト */
-    line-height: 1.6;
+body, html {
     margin: 0;
-    padding: 20px;
-}
-
-h1, h2 {
-    color: #A8DADC; /* ライトスカイブルー */
-}
-
-h1 {
-    font-size: 2.5em;
-    text-align: center;
-}
-
-h2 {
-    font-size: 1.8em;
-    border-bottom: 2px solid #A8DADC; /* ライトスカイブルー */
-    padding-bottom: 3px;
-}
-
-ul {
-    list-style-type: none;
     padding: 0;
+    height: 100%;
+    overflow-x: hidden;
 }
 
-ul li {
-    background-color: #172A45; /* ミッドナイトブルー */
-    margin-bottom: 8px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-a {
-    color: #A8DADC; /* ライトスカイブルー */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-p {
-    background-color: #172A45; /* ミッドナイトブルー */
-    padding: 10px;
-    border-left: 5px solid #8892B0; /* モダンシルバー */
-    border-radius: 5px;
-}
-
-#navbar {
-    background-color: #333; /* ナビゲーションバーの背景色 */
-    color: white;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 10px 0;
+header {
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed; /* 位置を固定 */
+    width: 100%; /* 幅を画面全体に */
+    top: 0; /* トップから0pxの位置に */
+    z-index: 1000; /* z-indexを高く設定して前面に表示 */
 }
 
 #navbar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
-#navbar li {
-    display: inline;
-    margin-right: 20px;
-}
-
-#navbar a {
-    color: #E6E6E6; /* プラチナグレー */
+#navbar ul li a {
     text-decoration: none;
-    font-weight: bold;
+    color: black;
 }
 
 #hero {
-    position:relative;
-    width:100%;
-    height:400px; 
-    background-size:cover;
-    background-position:center;
+    background-image: url('hero-image.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-top: 60px; /* headerの高さに応じて調整 */
+}
+.hero-text h1 {
+    margin: 0;
 }
 
-.hero-text {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    color:white;
-    text-align:center;
-    background-color:rgba(0,0,0,0.5);
-    padding:20px;
-    border-radius:8px;
+h2 {
+    padding: 10px 20px;
+    text-align: left;
+    color: #333;
+    font-size: 24px;
+    border-bottom: 2px solid #e2e2e2;
+    margin: 120px 0 20px; /* ヘッダーの高さ + 40px */
+    position: relative;
+    top: -120px; /* ヘッダーの高さ + 40px */
+}
+
+
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+.info-box {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    max-width: 700px;
+}
+
+.section-box {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.menu-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    overflow: hidden;
+}
+
+.menu-list li img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease-out;
+}
+
+.horizontal-parallax {
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+    transform: scale(1);
+}
+
+.horizontal-parallax:hover {
+    transform: scale(1.1);
+}
+
+.menu-list li:hover img {
+    transform: translateY(-10px) scale(1.1);
 }
 
 @media (max-width: 768px) {
-    body {
+    .info-box {
+        margin: 10px;
         padding: 10px;
     }
-
-    h1 {
-        font-size: 2em;
+    
+    header {
+        position: static;
     }
 
-    h2 {
-        font-size: 1.5em;
+    #navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #hero {
+        height: 50vh;
     }
 }
