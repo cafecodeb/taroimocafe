@@ -1,15 +1,19 @@
 /* 基本のスタイル設定 */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #0A192F; /* ダークネイビー */
+    color: #ECEFF4; /* クリーミーホワイト */
     line-height: 1.6;
     margin: 0;
     padding: 20px;
 }
 
 h1, h2 {
-    color: #1a237e;
+    color: #A8DADC; /* ライトスカイブルー */
 }
 
 h1 {
@@ -19,7 +23,7 @@ h1 {
 
 h2 {
     font-size: 1.8em;
-    border-bottom: 2px solid #1a237e;
+    border-bottom: 2px solid #A8DADC; /* ライトスカイブルー */
     padding-bottom: 3px;
 }
 
@@ -29,7 +33,7 @@ ul {
 }
 
 ul li {
-    background-color: #fff;
+    background-color: #172A45; /* ミッドナイトブルー */
     margin-bottom: 8px;
     padding: 10px;
     border-radius: 5px;
@@ -37,7 +41,7 @@ ul li {
 }
 
 a {
-    color: #1565c0;
+    color: #A8DADC; /* ライトスカイブルー */
     text-decoration: none;
 }
 
@@ -45,11 +49,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 特定のセクションのスタイルを強調表示 */
 p {
-    background-color: #e3f2fd;
+    background-color: #172A45; /* ミッドナイトブルー */
     padding: 10px;
-    border-left: 5px solid #1a237e;
+    border-left: 5px solid #8892B0; /* モダンシルバー */
     border-radius: 5px;
 }
 
@@ -57,11 +60,11 @@ p {
     background-color: #333; /* ナビゲーションバーの背景色 */
     color: white;
     width: 100%;
-    position: fixed; /* 常に画面の上部に固定 */
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 10px 0; /* パディングを加えてレイアウトを調整 */
+    padding: 10px 0;
 }
 
 #navbar ul {
@@ -72,17 +75,36 @@ p {
 }
 
 #navbar li {
-    display: inline; /* リスト項目を横並びに表示 */
+    display: inline;
     margin-right: 20px;
 }
 
 #navbar a {
-    color: rgb(57, 3, 72);
+    color: #E6E6E6; /* プラチナグレー */
     text-decoration: none;
     font-weight: bold;
 }
 
-/* レスポンシブデザイン：画面サイズに応じたスタイル調整 */
+#hero {
+    position:relative;
+    width:100%;
+    height:400px; 
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-text {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    color:white;
+    text-align:center;
+    background-color:rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:8px;
+}
+
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -96,4 +118,3 @@ p {
         font-size: 1.5em;
     }
 }
-
