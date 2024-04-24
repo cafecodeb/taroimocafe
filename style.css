@@ -41,6 +41,7 @@ header {
     text-align: center;
     margin-top: 60px; /* headerの高さに応じて調整 */
 }
+
 .hero-text h1 {
     margin: 0;
 }
